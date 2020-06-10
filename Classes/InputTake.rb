@@ -15,8 +15,8 @@ class TakeInput
   def takeCardInput(counter)
     print "Please enter card number #{counter + 1} > "
     card = gets.chomp
-    value = card[0].upcase
-    type = card[1].downcase
+    type = card[-1].downcase
+    value = card.chop.upcase
     return Card.new(type, value)
   end
 
